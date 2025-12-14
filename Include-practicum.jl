@@ -7,7 +7,10 @@ const _PATH_TO_FIGS = joinpath(_ROOT, "figs");
 # make sure all is up to date -
 using Pkg
 if (isfile(joinpath(_ROOT, "Manifest.toml")) == false) # have manifest file, we are good. Otherwise, we need to instantiate the environment
-    Pkg.activate("."); Pkg.resolve(); Pkg.instantiate(); Pkg.update();
+    Pkg.activate(".")
+    Pkg.resolve()
+    Pkg.instantiate()
+    Pkg.update()
 end
 
 # load external packages -
